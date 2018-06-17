@@ -1,0 +1,43 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__head {
+    flex-basis: auto;
+  }
+
+  &__body {
+    flex-basis: 0;
+    flex-grow: 1;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  &__footer {
+    flex-basis: auto;
+  }
+}
+
+@supports (display: grid) {
+  .page {
+    display: grid;
+    grid-template-areas: 'header'
+                         'body'
+                         'footer';
+
+    grid-template-rows: auto 1fr auto;
+
+    &__header {
+      grid-area: header;
+    }
+
+    &__body {
+      grid-area: body;
+    }
+
+    &__footer {
+      grid-area: footer;
+    }
+  }
+}

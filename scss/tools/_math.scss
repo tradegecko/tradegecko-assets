@@ -1,0 +1,19 @@
+// https://github.com/adambom/Sass-Math/blob/master/math.scss
+@function pow($number, $exp) {
+  $ret: 1;
+
+  @if $exp >= 0 {
+    @for $i from 1 through $exp {
+      $ret: $ret * $number;
+    }
+  } @else {
+    @for $i from $exp to 0 {
+      $ret: $ret / $number;
+    }
+  }
+  @return $ret;
+}
+
+@function clean-number($number) {
+  @return $number / ($number * 0 + 1);
+}

@@ -1,0 +1,15 @@
+.site-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: $size-lg $size-md;
+  &__text {
+    @include small-text;
+    color: $gray-4;
+    text-align: center;
+    &--strong {
+      color: $gray-9;
+    }
+  }
+}

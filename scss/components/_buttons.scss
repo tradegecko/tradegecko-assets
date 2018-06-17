@@ -1,0 +1,128 @@
+.btn {
+  border-radius: $border-radius;
+  height: $input-height;
+  line-height: $input-height - ($border-width * 2);
+  padding-left: $size-md;
+  padding-right: $size-md;
+  border: $border-width solid transparent;
+}
+
+[class*="btn-"] {
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn {
+  // Colours
+  &-primary {
+    color: $c-moko;
+    background-color: $c-moko;
+    border-color: $c-moko;
+    transition: background-color 0.1s ease;
+    &:hover {
+      background-color: $c-moko-dark;
+    }
+  }
+
+  &-secondary {
+    color: $gray-5;
+    background-color: $gray-5;
+    border-color: $gray-5;
+  }
+
+  &-outline {
+    color: $c-moko;
+    background-color: $white;
+    border-color: $c-moko;
+    transition: background-color 0.1s ease;
+    &:hover {
+      color: $white;
+      background-color: $c-moko-dark;
+    }
+  }
+
+  &-danger {
+    color: $c-watermelon;
+    background-color: $c-watermelon;
+    border-color: $c-watermelon;
+  }
+
+
+  // Appearances
+  &-cta {
+    color: white;
+  }
+
+  &-hollow {
+    background-color: transparent;
+    border-style: solid;
+  }
+
+  &-naked {
+    background-color: transparent;
+    border-color: transparent;
+    padding-left: $size-sm;
+    padding-right: $size-sm;
+  }
+
+  &-tiny {
+    background-color: transparent;
+    border: 1px solid rgba($c-moko, 0.5);
+    padding: 0 $size-xs;
+
+    color: $c-moko;
+    font-family: $font-family-title;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 0;
+    text-transform: uppercase;
+
+    height: 26px;
+
+    transition: border-color 0.2s ease;
+    &:hover {
+      border: 1px solid $c-moko;
+      box-shadow: 0px 1px 1px $gray-2;
+    }
+
+    &:disabled {
+      color: $gray-3;
+      border: 1px solid $gray-2;
+      &:hover {
+        border: 1px solid $gray-2;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &-clear {
+    color: $gray-4;
+    padding: 0;
+    &:hover {
+      color: $gray-5;
+    }
+  }
+
+  // Transforms
+  &-big {
+    $big-button-height: 40px;
+
+    height: $big-button-height;
+    line-height: $big-button-height;
+    padding-left: $size-lg;
+    padding-right: $size-lg;
+    font-family: $font-family-title;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+
+  // Overrides
+  &-big#{ & }-naked {
+    padding-left: $size-md;
+    padding-right: $size-md;
+  }
+}

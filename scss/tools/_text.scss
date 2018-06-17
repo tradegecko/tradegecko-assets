@@ -1,0 +1,54 @@
+@mixin default-font-modifiers {
+  > strong {
+    font-weight: $font-weight-bold;
+  }
+
+  > em {
+    font-style: italic;
+  }
+}
+
+@mixin primary-header {
+  @include default-font-modifiers;
+  font-size: 28px;
+  font-family: $font-family-title;
+  font-weight: $font-weight-light;
+}
+
+@mixin secondary-header {
+  @include default-font-modifiers;
+  font-size: 16px;
+  font-family: $font-family-title;
+  font-weight: $font-weight-light;
+}
+
+@mixin body-text {
+  @include default-font-modifiers;
+  font-size: 14px;
+  font-family: $font-family-body;
+  font-weight: $font-weight-normal;
+}
+
+@mixin small-text {
+  @include default-font-modifiers;
+  font-size: 12px;
+  font-family: $font-family-body;
+  font-weight: $font-weight-normal;
+}
+
+@mixin section-header {
+  @include default-font-modifiers;
+  font-size: 14px;
+  font-family: $font-family-body;
+  font-weight: $font-weight-normal;
+}
+
+@mixin inline-code {
+  @include default-font-modifiers;
+  font-size: 14px;
+  font-family: $font-family-code;
+  background-color: $gray-1;
+  color: $c-watermelon;
+  padding: $size-xs $size-sm;
+  border-radius: $border-radius;
+}

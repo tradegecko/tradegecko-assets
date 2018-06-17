@@ -1,0 +1,16 @@
+@function row-spacing($item-height, $parent-height) {
+  @return ($parent-height - $item-height) / 2;
+}
+
+@mixin row-spacing($method, $item-height, $parent-height) {
+  #{ $method }-top:    row-spacing($item-height, $parent-height);
+  #{ $method }-bottom: row-spacing($item-height, $parent-height);
+}
+
+@mixin row-margins($item-height, $parent-height: $row-height) {
+  @include row-spacing(margin, $item-height, $parent-height);
+}
+
+@mixin row-padding($item-height, $parent-height: $row-height) {
+  @include row-spacing(padding, $item-height, $parent-height);
+}

@@ -1,0 +1,14 @@
+.form-control {
+  &:not(textarea) {
+    line-height: $input-height;
+    height: $input-height;
+  }
+
+  &:focus {
+    border-color: $gray-4;
+    box-shadow: 0px 0px 4px rgba($gray-3, 0.8);
+    border-color: $gray-3;
+  }
+}
+
+

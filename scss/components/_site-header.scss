@@ -1,0 +1,62 @@
+.site-header {
+  $header-spacing: 100px;
+  $logo-img-height: 80px;
+  $logo-img-width: 50px;
+  $header-line-height: 80px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: $size-xxl 0 0;
+  border-bottom: 1px solid $gray-2;
+  height: 120px;
+
+  &__branding {
+    display: inline-flex;
+    align-items: center;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    width: $logo-img-width;
+    height: $logo-img-height;
+    background: url(svg-encode($svg-logo));
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: $size-md;
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__title {
+    font-family: $font-family-title;
+    font-size: 18px;
+    font-weight: $font-weight-light;
+    line-height: $logo-img-height;
+    letter-spacing: 0.2px;
+    color: $gray-9;
+
+    border-left: 1px solid $gray-2;
+    margin-left: $size-md;
+    padding-left: $size-md;
+
+    &--strong {
+      font-weight: $font-weight-normal;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: flex-end;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}
