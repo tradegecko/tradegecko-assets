@@ -65,6 +65,9 @@
     border-color: transparent;
     padding-left: $size-sm;
     padding-right: $size-sm;
+    &:hover {
+      background-color: transparent;
+    }
   }
 
   &-tiny {
