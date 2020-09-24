@@ -17,36 +17,80 @@
 .btn {
   // Colours
   &-primary {
-    color: $c-moko;
-    background-color: $c-moko;
-    border-color: $c-moko;
-    transition: background-color 0.1s ease;
-    &:hover {
-      background-color: $c-moko-dark;
+    color: $white;
+    background-color: $c-green-2;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: rgba($c-green-1, 0.9);
+    }
+
+    &:active:focus {
+      color: $white;
+      background-color: $c-green-1;
+      box-shadow: unset;
+    }
+
+    &:disabled,
+    &:disabled:hover {
+      color: $white;
+      background: $c-green-2;
+      opacity: 0.4;
     }
   }
 
   &-secondary {
-    color: $gray-5;
-    background-color: $gray-5;
-    border-color: $gray-5;
+    color: $c-gray-3;
+    background-color: $c-gray-3;
+    border-color: $c-gray-3;
+  }
+
+  &-default {
+    color: $c-gray-1;
+    background-color: $white;
+    border-color: $c-gray-3;
+    border-width: 2px;
+    height: 36px;
+
+    &:hover,
+    &:focus {
+      color: $c-gray-1;
+      background-color: rgba($c-gray-3, 0.2);
+      border-color: $c-gray-3;
+    }
+
+    &:active:focus {
+      color: $c-gray-1;
+      background-color: rgba($c-gray-3, 0.4);
+      border-color: $c-gray-3;
+      box-shadow: unset;
+    }
+
+    &:disabled,
+    &:disabled:hover {
+      opacity: 0.4;
+      color: $c-gray-1;
+      border-color: $c-gray-3;
+      background-color: $white;
+    }
   }
 
   &-outline {
-    color: $c-moko;
+    color: $c-green-2;
     background-color: $white;
-    border-color: $c-moko;
+    border-color: $c-green-2;
     transition: background-color 0.1s ease;
     &:hover {
       color: $white;
-      background-color: $c-moko-dark;
+      background-color: $c-green-1;
     }
   }
 
   &-danger {
-    color: $c-watermelon;
-    background-color: $c-watermelon;
-    border-color: $c-watermelon;
+    color: $c-red-4;
+    background-color: $c-red-4;
+    border-color: $c-red-4;
   }
 
 
@@ -60,7 +104,7 @@
     border-style: solid;
   }
 
-  &-naked {
+  &-icon {
     background-color: transparent;
     border-color: transparent;
     padding-left: $size-sm;
@@ -69,10 +113,10 @@
 
   &-tiny {
     background-color: transparent;
-    border: 1px solid rgba($c-moko, 0.5);
+    border: 1px solid rgba($c-green-2, 0.5);
     padding: 0 $size-xs;
 
-    color: $c-moko;
+    color: $c-green-2;
     font-family: $font-family-title;
     font-weight: 700;
     font-size: 12px;
@@ -83,40 +127,66 @@
 
     transition: border-color 0.2s ease;
     &:hover {
-      border: 1px solid $c-moko;
-      box-shadow: 0px 1px 1px $gray-2;
+      border: 1px solid $c-green-2;
+      box-shadow: 0px 1px 1px $c-gray-7;
     }
 
     &:disabled {
-      color: $gray-3;
-      border: 1px solid $gray-2;
+      color: $c-gray-5;
+      border: 1px solid $c-gray-7;
       &:hover {
-        border: 1px solid $gray-2;
+        border: 1px solid $c-gray-7;
         box-shadow: none;
       }
     }
   }
 
   &-clear {
-    color: $gray-4;
+    color: $c-gray-4;
     padding: 0;
     &:hover {
-      color: $gray-5;
+      color: $c-gray-3;
+    }
+  }
+
+  &-naked {
+    color: $c-blue-2;
+    display: inline-block;
+    border: 0;
+
+    &:hover,
+    &:focus {
+      color: $c-blue-1;
+      background-color: rgba($c-gray-3, 0.2);
+    }
+
+    &:active:focus {
+      color: $c-blue-1;
+      background-color: rgba($c-gray-3, 0.4);
+      box-shadow: unset;
+    }
+
+    &:disabled,
+    &:disabled:hover {
+      color: $c-blue-2;
+      border: unset;
+      background: unset;
+      opacity: 0.4;
     }
   }
 
   // Transforms
   &-big {
-    $big-button-height: 40px;
+    $big-button-height: 36px;
 
     height: $big-button-height;
     line-height: $big-button-height;
     padding-left: $size-lg;
     padding-right: $size-lg;
     font-family: $font-family-title;
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    font-size: 14px;
+    border-radius: $big-button-height / 2;
   }
 
 
@@ -125,4 +195,13 @@
     padding-left: $size-md;
     padding-right: $size-md;
   }
+
+  &-big#{ & }-default {
+    $big-button-height: 36px;
+    line-height: $big-button-height - 2;
+  }
+}
+
+.btn-group>.btn-group:not(:first-child), .btn-group>.btn:not(:first-child) {
+  margin-left: -2px !important; // stylelint-disable-line declaration-no-important
 }
