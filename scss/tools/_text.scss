@@ -43,23 +43,23 @@
   font-weight: $font-weight-normal;
 }
 
+@mixin inline-code {
+  @include default-font-modifiers;
+  font-size: 14px;
+  font-family: $font-family-code;
+  background-color: $c-gray-8;
+  color: $c-red-3;
+  padding: $size-xs $size-sm;
+  border-radius: $border-radius;
+}
+
 @mixin input-text {
   font-size: 12px;
-  color: $c-slate;
+  color: $c-gray-2;
 }
 
 @mixin label-text {
   font-size: 12px;
   line-height: 16px;
   font-weight: $font-weight-bold;
-}
-
-@mixin inline-code {
-  @include default-font-modifiers;
-  font-size: 14px;
-  font-family: $font-family-code;
-  background-color: $gray-1;
-  color: $c-watermelon;
-  padding: $size-xs $size-sm;
-  border-radius: $border-radius;
 }

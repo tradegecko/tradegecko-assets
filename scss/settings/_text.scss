@@ -1,8 +1,19 @@
-$font-family-body:  'Open Sans', Helvetica, Arial, sans-serif;
-$font-family-title: 'Raleway', $font-family-body;
+$font-family-body:  'AvenirNext', Helvetica, Arial, sans-serif;
+$font-family-title: $font-family-body;
 $font-family-code:  'Source Code Pro', 'Andale Mono', 'Courier New', monospace;
 
 $font-weight-light:  300;
 $font-weight-normal: 400;
+$font-weight-medium: 500;
 $font-weight-bold:   600;
 $font-weight-heavy:  700;
+
+
+// $admin-font-base: "AvenirNext", sans-serif;
+// $admin-font-cap: "AvenirNext", sans-serif;
+// $admin-font-weight-normal: 400;
+// $admin-font-weight-medium: 500;
+//
+// $admin-font-weight-heavy: 700;
+$icon-size: 20px;
+$font-size: 14px

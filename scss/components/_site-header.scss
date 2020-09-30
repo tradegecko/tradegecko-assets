@@ -1,14 +1,14 @@
 .site-header {
   $header-spacing: 100px;
-  $logo-img-height: 80px;
-  $logo-img-width: 50px;
+  $logo-img-height: 42px;
+  $logo-img-width: 175px;
   $header-line-height: 80px;
 
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: $size-xxl 0 0;
-  border-bottom: 1px solid $gray-2;
+  border-bottom: 1px solid $c-gray-7;
   height: 120px;
 
   &__branding {
@@ -25,6 +25,7 @@
     background: url(svg-encode($svg-logo));
     background-position: left center;
     background-repeat: no-repeat;
+    background-size: contain;
     padding: $size-md;
     &:focus {
       outline: 0;
@@ -33,18 +34,18 @@
 
   &__title {
     font-family: $font-family-title;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: $font-weight-light;
     line-height: $logo-img-height;
     letter-spacing: 0.2px;
-    color: $gray-9;
+    color: $c-gray-1;
 
-    border-left: 1px solid $gray-2;
+    border-left: 1px solid $c-gray-7;
     margin-left: $size-md;
     padding-left: $size-md;
 
     &--strong {
-      font-weight: $font-weight-normal;
+      font-weight: $font-weight-bold;
     }
 
     &:hover {
@@ -57,6 +58,14 @@
     justify-content: flex-end;
     @include media-breakpoint-down(sm) {
       display: none;
+    }
+
+    .btn {
+      margin-right: 10px
+    }
+
+    .btn:last-child {
+      margin-right: 0;
     }
   }
 }

@@ -6,7 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "ember-addon"
+  ],
   "author": "bradley@tradegecko.com",
   "license": "Unlicensed",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "broccoli-funnel": "^3.0.3",
+    "broccoli-merge-trees": "^4.2.0"
+  }
 }

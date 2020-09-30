@@ -6,12 +6,12 @@ body {
   font-family: $font-family-body;
   font-weight: $font-weight-normal;
   line-height: 1.4;
-  color: $gray-9;
+  color: $c-gray-1;
 }
 
 a,
 button {
-  color: $c-moko;
+  color: $c-blue-2;
   text-decoration: none;
   cursor: pointer;
 
@@ -20,15 +20,6 @@ button {
   }
 }
 
-@media (min-width: 1500px) {
-  html {
-    font-size: 0.9vw;
-  }
+h5 {
+  font-size: 1.25rem;
 }
-
-@media (min-width: 2000px) {
-  html {
-    font-size: 17PX;
-  }
-}
-

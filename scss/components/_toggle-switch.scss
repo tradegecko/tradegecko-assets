@@ -17,7 +17,7 @@
     width: $toggle-width;
     height: $toggle-height;
     border-radius: $toggle-height / 2;
-    background-color: $gray-3;
+    background-color: $c-gray-3;
     cursor: pointer;
     user-select: none;
     overflow: hidden;
@@ -53,7 +53,7 @@
 
   &--checked & {
     &__switch {
-      background-color: $c-moko;
+      background-color: $c-green-2;
     }
 
     &__slider {
@@ -63,6 +63,6 @@
 
   &--disabled &__switch {
     cursor: not-allowed;
-    background-color: $gray-2;
+    background-color: $c-gray-2;
   }
 }
